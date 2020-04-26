@@ -1,0 +1,264 @@
+/*
+COLORS:
+Red: #D51D28
+Black: #000000
+LightBlue: #B4DDEF
+DarkBlue: #63B2D5
+Grey: #8B8B8B
+LightGrey: #C4C4C4
+
+FONT:
+font-family: 'Nunito', sans-serif; regular
+font-family: 'Josefin Sans', sans-serif; regular, bold, semi-bold
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  max-width: 80%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+}
+
+h1, h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.page_divider {
+  border-top: 3px solid black;
+  width: 60%;
+  margin: 0 auto;
+}
+
+button {
+  padding: 10px 30px;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+}
+
+#about, #services, #work, #pricing, #contact {
+  margin: 90px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+.nav_bar {
+  display: flex;
+}
+
+/* .nav_bar a {
+  font-size: 26px;
+} */
+
+.header_banner {
+  height: 95vh;
+  background-image: url(../img/header_banner.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#about {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about_description {
+  width: 40%;
+  text-align: center;
+}
+
+.about_description h1 {
+  margin: 20px;
+}
+
+.about_pic {
+  width: 30%;
+}
+
+.about_pic img {
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  border-top: 20px solid #D51D28;
+  border-right: 20px solid #63B2D5;
+}
+
+#services h2,
+#services p,
+#pricing h2 {
+  color: #D51D28;
+  text-align: center;
+}
+
+#services p {
+  color: black;
+}
+
+#work h2 {
+  color: #63B2D5;
+  text-align: center;
+  padding-right: 35px;
+}
+
+#services h2, 
+p,
+#pricing h2 {
+  margin: 20px;
+}
+
+.service_imgs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service_imgs img {
+  height: 300px;
+  width: 100%;
+  max-width: 517px;
+  object-fit: cover;
+}
+
+.service_imgs li {
+  width: 45%;
+  border-top: 2px solid #D51D28;
+  border-left: 2px solid #63B2D5;
+  border-right: 2px solid  #63B2D5;
+  border-bottom: 2px solid #D51D28;
+  padding: 20px;
+  position: relative;
+
+}
+
+.service_box {
+  text-align: center;
+  border: 1px solid #C4C4C4;
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  position: absolute;
+  bottom: -25px;
+  left: 25%;
+}
+
+figure {
+  text-align: center;
+}
+
+.work_imgs img {
+  height: 250px;
+  width: 100%;
+  max-width: 325px;
+  object-fit: cover;
+}
+
+.work_imgs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work_imgs li {
+  width: 30%;
+}
+
+.pricing_container {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing_name {
+  font-size: 24px;
+}
+
+.pricing_cost {
+  color: #8B8B8B;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+#contact h2 {
+  color: #D51D28;
+  text-align: center;
+}
+
+#contact p {
+  text-align: center;
+}
+
+.input_fields input {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  border: 1px solid black;
+  font-size: 24px;
+  padding: 5px;
+  color: #8B8B8B;
+}
+
+.input_fields label {
+  font-size: 24px;
+}
+
+.input_fields {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.submit_button {
+  width: 200px;
+}
+
+.social_email {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.social_email a {
+  padding-left: 20px;
+}
+
+footer p {
+  text-align: center;
+}
