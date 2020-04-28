@@ -12,69 +12,104 @@ font-family: 'Nunito', sans-serif; regular
 font-family: 'Josefin Sans', sans-serif; regular, bold, semi-bold
 */
 
-* {
+*,
+*:after,
+*:before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.5;
   color: #000000;
-  max-width: 80%;
   /* border: 1px solid red; */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 80%;
   margin: 0 auto;
 }
 
 h1, h2 {
-  font-size: 26px;
+  font-size: 2.6rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 400;
 }
 
 li {
   list-style: none;
-  margin-left: 20px;
-  margin-top: 30px;
+  margin-left: 2rem;
+  margin-top: 3rem;
 }
 
-a {
+a:link,
+a:visited {
   color: black;
   text-decoration: none;
 }
 
 .page_divider {
-  border-top: 3px solid black;
+  border-top: .3rem solid black;
   width: 60%;
   margin: 0 auto;
 }
 
 button {
-  padding: 10px 30px;
-  font-size: 24px;
+  padding: 1rem 3rem;
+  font-size: 2.4rem;
   background-color: black;
   color: white;
-  margin-top: 20px;
+  margin-top: 2rem;
+  transition: all .2s;
+}
+
+button:hover {
+  transform: translateY(-.3rem);
+}
+
+button:active {
+  transform: translateY(-.1rem) ;
 }
 
 #about, #services, #work, #pricing, #contact {
-  margin: 90px 0;
+  margin: 9rem 0;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 0px 10rem;
+  z-index: 1;
+  position: relative;
+}
+
+.nav_hamburger {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  display: none;
 }
 
 .logo {
-  width: 300px;
+  width: 30rem;
   height: auto;
 }
 
@@ -89,8 +124,74 @@ nav {
 .header_banner {
   height: 95vh;
   background-image: url(../img/header_banner.jpg);
+  background-color: #8B8B8B;
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
+}
+
+.header_banner_content_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header_banner_content_container h1 {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.header_copy-main {
+  display: block;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 2rem;
+  text-align: center;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.header_copy-sub {
+  display: block;
+  font-size: 6rem;
+  font-weight: 600;
+  letter-spacing: 1.74rem;
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem)
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem)
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #about {
@@ -104,7 +205,7 @@ nav {
 }
 
 .about_description h1 {
-  margin: 20px;
+  margin: 2rem;
 }
 
 .about_pic {
@@ -114,10 +215,10 @@ nav {
 .about_pic img {
   height: auto;
   width: 100%;
-  max-width: 300px;
+  max-width: 30rem;
   object-fit: cover;
-  border-top: 20px solid #D51D28;
-  border-right: 20px solid #63B2D5;
+  border-top: 2rem solid #D51D28;
+  border-right: 2rem solid #63B2D5;
 }
 
 #services h2,
@@ -134,24 +235,25 @@ nav {
 #work h2 {
   color: #63B2D5;
   text-align: center;
-  padding-right: 35px;
+  padding-right: 3.5rem;
 }
 
 #services h2, 
 p,
 #pricing h2 {
-  margin: 20px;
+  margin: 2rem;
 }
 
 .service_imgs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .service_imgs img {
-  height: 300px;
+  height: 30rem;
   width: 100%;
-  max-width: 517px;
+  max-width: 51.7rem;
   object-fit: cover;
 }
 
@@ -161,20 +263,20 @@ p,
   border-left: 2px solid #63B2D5;
   border-right: 2px solid  #63B2D5;
   border-bottom: 2px solid #D51D28;
-  padding: 20px;
+  padding: 2rem;
   position: relative;
 
 }
 
 .service_box {
   text-align: center;
-  border: 1px solid #C4C4C4;
+  border: .1rem solid #C4C4C4;
   background-color: white;
   width: 50%;
   margin: 0 auto;
   padding: 10px;
   position: absolute;
-  bottom: -25px;
+  bottom: -2.5rem;
   left: 25%;
 }
 
@@ -183,15 +285,16 @@ figure {
 }
 
 .work_imgs img {
-  height: 250px;
+  height: 25rem;
   width: 100%;
-  max-width: 325px;
+  max-width: 32.5rem;
   object-fit: cover;
 }
 
 .work_imgs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .work_imgs li {
@@ -199,20 +302,20 @@ figure {
 }
 
 .pricing_container {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
 .pricing_name {
-  font-size: 24px;
+  font-size: 1.8rem;
 }
 
 .pricing_cost {
   color: #8B8B8B;
-  font-size: 24px;
-  margin-left: 20px;
+  font-size: 1.8rem;
+  margin-left: 2rem;
 }
 
 #contact h2 {
@@ -228,13 +331,13 @@ figure {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
   border: 1px solid black;
-  font-size: 24px;
-  padding: 5px;
+  font-size: 2.4rem;
+  padding: .5rem;
   color: #8B8B8B;
 }
 
 .input_fields label {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 .input_fields {
@@ -245,7 +348,7 @@ figure {
 }
 
 .submit_button {
-  width: 200px;
+  width: 20rem;
 }
 
 .social_email {
@@ -256,9 +359,63 @@ figure {
 }
 
 .social_email a {
-  padding-left: 20px;
+  padding-left: 2rem;
 }
 
 footer p {
   text-align: center;
+}
+
+@media (max-width: 12500) {
+  .pricing_container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  /* add hamburger menu */
+  html {
+    font-size: 50%;
+  }
+
+  .work_imgs li {
+    width: 46%;
+  }
+
+  @media (max-width: 700px) {
+    .nav_hamburger {
+      display: block;
+    }
+
+    .nav_bar {
+      display: none;
+    }
+
+    #about {
+      flex-direction: column;
+    }
+    .about_description {
+      width: 100%;
+      order: 2;
+    }
+
+    .about_pic {
+      width: 100%;
+      order: 1;
+    }
+    .pricing_container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .work_imgs li {
+      width: 100%;
+    }
+
+    .service_imgs li {
+      width: 100%;
+    }
+  }
 }
