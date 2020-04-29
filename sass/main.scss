@@ -30,7 +30,7 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #000000;
+  color: $black;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -75,14 +75,12 @@ button {
   color: $white;
   margin-top: 2rem;
   transition: all .2s;
-}
-
-button:hover {
-  transform: translateY(-.3rem);
-}
-
-button:active {
-  transform: translateY(-.1rem) ;
+  &:hover {
+    transform: translateY(-.3rem);
+  }
+  &:active {
+    transform: translateY(-.1rem);
+  }
 }
 
 #about, #services, #work, #pricing, #contact {
@@ -136,12 +134,11 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.header_banner_content_container h1 {
-  color: $white;
-  text-transform: uppercase;
-  backface-visibility: hidden;
+  h1 {
+    color: $white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+  }
 }
 
 .header_copy-main {
@@ -203,70 +200,70 @@ nav {
 .about_description {
   width: 40%;
   text-align: center;
-}
-
-.about_description h1 {
-  margin: 2rem;
+  h1 {
+    margin: 2rem;
+  }
 }
 
 .about_pic {
   width: 30%;
+  img {
+    height: auto;
+    width: 100%;
+    max-width: 30rem;
+    object-fit: cover;
+    border-top: 2rem solid $red;
+    border-right: 2rem solid $lightBlue;
+  }
 }
 
-.about_pic img {
-  height: auto;
-  width: 100%;
-  max-width: 30rem;
-  object-fit: cover;
-  border-top: 2rem solid $red;
-  border-right: 2rem solid $lightBlue;
+#services {
+  h2 {
+    color: $red;
+    text-align: center;
+    margin: 2rem;
+  }
+  p {
+    color: $black;
+    text-align: center;
+  }
 }
 
-#services h2,
-#services p,
-#pricing h2 {
-  color: $red;
-  text-align: center;
+#pricing {
+  h2 {
+    color: $red;
+    text-align: center;
+    margin: 2rem;
+  }
 }
 
-#services p {
-  color: $black;
-}
-
-#work h2 {
-  color: $lightBlue;
-  text-align: center;
-  padding-right: 3.5rem;
-}
-
-#services h2, 
-p,
-#pricing h2 {
-  margin: 2rem;
+#work {
+  h2 {
+    color: $lightBlue;
+    text-align: center;
+    padding-right: 3.5rem;
+  }
 }
 
 .service_imgs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.service_imgs img {
-  height: 30rem;
-  width: 100%;
-  max-width: 51.7rem;
-  object-fit: cover;
-}
-
-.service_imgs li {
-  width: 45%;
-  border-top: 2px solid $red;
-  border-left: 2px solid $lightBlue;
-  border-right: 2px solid  $lightBlue;
-  border-bottom: 2px solid $red;
-  padding: 2rem;
-  position: relative;
-
+  li {
+    width: 45%;
+    border-top: 2px solid $red;
+    border-left: 2px solid $lightBlue;
+    border-right: 2px solid  $lightBlue;
+    border-bottom: 2px solid $red;
+    padding: 2rem;
+    position: relative;
+    }
+  img {
+    height: 30rem;
+    width: 100%;
+    max-width: 51.7rem;
+    object-fit: cover;
+  }
 }
 
 .service_box {
@@ -285,21 +282,19 @@ figure {
   text-align: center;
 }
 
-.work_imgs img {
-  height: 25rem;
-  width: 100%;
-  max-width: 32.5rem;
-  object-fit: cover;
-}
-
 .work_imgs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.work_imgs li {
-  width: 30%;
+  li {
+    width: 30%;
+  }
+  img {
+    height: 25rem;
+    width: 100%;
+    max-width: 32.5rem;
+    object-fit: cover;
+  }
 }
 
 .pricing_container {
@@ -323,26 +318,34 @@ figure {
   margin-left: 2rem;
 }
 
-#contact h2 {
-  color: $red;
-  text-align: center;
+#contact {
+  h2 {
+    color: $red;
+    text-align: center;
+  }
 }
 
-#contact p {
-  text-align: center;
+#contact {
+  p {
+    text-align: center;
+  }
 }
 
-.input_fields input {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 400;
-  border: 1px solid $black;
-  font-size: 2.4rem;
-  padding: .5rem;
-  color: $grey;
+.input_fields {
+  input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    border: 1px solid $black;
+    font-size: 2.4rem;
+    padding: .5rem;
+    color: $grey;
+  }
 }
 
-.input_fields label {
-  font-size: 2.4rem;
+.input_fields {
+  label {
+    font-size: 2.4rem;
+  }
 }
 
 .input_fields {
@@ -363,12 +366,16 @@ figure {
   justify-content: center;
 }
 
-.social_email a {
-  padding-left: 2rem;
+.social_email {
+  a {
+    padding-left: 2rem;
+  }
 }
 
-footer p {
-  text-align: center;
+footer {
+  p {
+    text-align: center;
+  }
 }
 
 @media (max-width: 1250) {
@@ -378,13 +385,14 @@ footer p {
 }
 
 @media (max-width: 900px) {
-  /* add hamburger menu */
   html {
     font-size: 50%;
   }
 
-  .work_imgs li {
-    width: 46%;
+  .work_imgs {
+    li {
+      width: 46%;
+    }
   }
 
   @media (max-width: 700px) {
@@ -424,8 +432,10 @@ footer p {
       order: 1;
     }
 
-    .service_imgs li {
-      width: 100%;
+    .service_imgs {
+      li {
+        width: 100%;
+      }
     }
 
     .pricing_container {
@@ -439,13 +449,17 @@ footer p {
   }
 
   @media (max-width: 500px) {
-    .work_imgs li {
-      width: 100%;
+    .work_imgs {
+      li {
+        width: 100%;
+      }
     }
 
-    .work_imgs img {
-      max-width: 51.7rem;
-      height: 40rem;
+    .work_imgs {
+      img {
+        max-width: 51.7rem;
+        height: 40rem;
+      }
     }
   }
 }

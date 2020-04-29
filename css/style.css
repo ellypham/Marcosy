@@ -57,12 +57,10 @@ button {
   color: #ffffff;
   margin-top: 2rem;
   transition: all .2s; }
-
-button:hover {
-  transform: translateY(-0.3rem); }
-
-button:active {
-  transform: translateY(-0.1rem); }
+  button:hover {
+    transform: translateY(-0.3rem); }
+  button:active {
+    transform: translateY(-0.1rem); }
 
 #about, #services, #work, #pricing, #contact {
   margin: 9rem 0; }
@@ -108,11 +106,10 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); }
-
-.header_banner_content_container h1 {
-  color: #ffffff;
-  text-transform: uppercase;
-  backface-visibility: hidden; }
+  .header_banner_content_container h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    backface-visibility: hidden; }
 
 .header_copy-main {
   display: block;
@@ -158,59 +155,55 @@ nav {
 .about_description {
   width: 40%;
   text-align: center; }
-
-.about_description h1 {
-  margin: 2rem; }
+  .about_description h1 {
+    margin: 2rem; }
 
 .about_pic {
   width: 30%; }
+  .about_pic img {
+    height: auto;
+    width: 100%;
+    max-width: 30rem;
+    object-fit: cover;
+    border-top: 2rem solid #D51D28;
+    border-right: 2rem solid #B4DDEF; }
 
-.about_pic img {
-  height: auto;
-  width: 100%;
-  max-width: 30rem;
-  object-fit: cover;
-  border-top: 2rem solid #D51D28;
-  border-right: 2rem solid #B4DDEF; }
-
-#services h2,
-#services p,
-#pricing h2 {
+#services h2 {
   color: #D51D28;
-  text-align: center; }
+  text-align: center;
+  margin: 2rem; }
 
 #services p {
-  color: #000000; }
+  color: #000000;
+  text-align: center; }
+
+#pricing h2 {
+  color: #D51D28;
+  text-align: center;
+  margin: 2rem; }
 
 #work h2 {
   color: #B4DDEF;
   text-align: center;
   padding-right: 3.5rem; }
 
-#services h2,
-p,
-#pricing h2 {
-  margin: 2rem; }
-
 .service_imgs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-
-.service_imgs img {
-  height: 30rem;
-  width: 100%;
-  max-width: 51.7rem;
-  object-fit: cover; }
-
-.service_imgs li {
-  width: 45%;
-  border-top: 2px solid #D51D28;
-  border-left: 2px solid #B4DDEF;
-  border-right: 2px solid #B4DDEF;
-  border-bottom: 2px solid #D51D28;
-  padding: 2rem;
-  position: relative; }
+  .service_imgs li {
+    width: 45%;
+    border-top: 2px solid #D51D28;
+    border-left: 2px solid #B4DDEF;
+    border-right: 2px solid #B4DDEF;
+    border-bottom: 2px solid #D51D28;
+    padding: 2rem;
+    position: relative; }
+  .service_imgs img {
+    height: 30rem;
+    width: 100%;
+    max-width: 51.7rem;
+    object-fit: cover; }
 
 .service_box {
   text-align: center;
@@ -226,19 +219,17 @@ p,
 figure {
   text-align: center; }
 
-.work_imgs img {
-  height: 25rem;
-  width: 100%;
-  max-width: 32.5rem;
-  object-fit: cover; }
-
 .work_imgs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-
-.work_imgs li {
-  width: 30%; }
+  .work_imgs li {
+    width: 30%; }
+  .work_imgs img {
+    height: 25rem;
+    width: 100%;
+    max-width: 32.5rem;
+    object-fit: cover; }
 
 .pricing_container {
   width: 100%;
@@ -301,7 +292,6 @@ footer p {
     width: 90%; } }
 
 @media (max-width: 900px) {
-  /* add hamburger menu */
   html {
     font-size: 50%; }
   .work_imgs li {
