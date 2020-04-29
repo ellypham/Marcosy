@@ -12,7 +12,8 @@ font-family: 'Josefin Sans', sans-serif; regular, bold, semi-bold
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -74,7 +75,8 @@ nav {
   background-color: #ffffff;
   padding: 0px 10rem;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  position: fixed; }
 
 .nav_hamburger {
   position: absolute;
