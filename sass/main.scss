@@ -400,6 +400,7 @@ footer {
   @media (max-width: 700px) {
     nav {
       padding: 0;
+      height: 8rem;
     }
 
     .nav_hamburger {
@@ -423,6 +424,11 @@ footer {
 
     .nav_bar__mobile {
       display: block;
+    }
+
+    .logo {
+      width: 20rem;
+      height: 10rem;
     }
 
     #about {

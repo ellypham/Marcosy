@@ -301,7 +301,8 @@ footer p {
 
 @media (max-width: 900px) and (max-width: 700px) {
   nav {
-    padding: 0; }
+    padding: 0;
+    height: 8rem; }
   .nav_hamburger {
     display: block; }
   .nav_bar {
@@ -319,6 +320,9 @@ footer p {
     justify-content: center; }
   .nav_bar__mobile {
     display: block; }
+  .logo {
+    width: 20rem;
+    height: 10rem; }
   #about {
     flex-direction: column; }
   .about_description {
