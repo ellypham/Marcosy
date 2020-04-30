@@ -296,6 +296,9 @@ footer p {
 @media (max-width: 900px) {
   html {
     font-size: 50%; }
+  .logo {
+    width: 20rem;
+    height: 10rem; }
   .work_imgs li {
     width: 46%; } }
 
@@ -311,7 +314,6 @@ footer p {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100%;
     background: rgba(255, 255, 255, 0.7);
     text-align: center;
@@ -320,9 +322,6 @@ footer p {
     justify-content: center; }
   .nav_bar__mobile {
     display: block; }
-  .logo {
-    width: 20rem;
-    height: 10rem; }
   #about {
     flex-direction: column; }
   .about_description {

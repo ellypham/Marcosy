@@ -391,6 +391,11 @@ footer {
     font-size: 50%;
   }
 
+  .logo {
+    width: 20rem;
+    height: 10rem;
+  }
+
   .work_imgs {
     li {
       width: 46%;
@@ -413,7 +418,6 @@ footer {
       position: fixed;
       top: 0;
       left: 0; 
-      height: 100vh;
       width: 100%;
       background: rgba(255,255,255,0.7);
       text-align: center;
@@ -426,10 +430,10 @@ footer {
       display: block;
     }
 
-    .logo {
-      width: 20rem;
-      height: 10rem;
-    }
+    // .logo {
+    //   width: 20rem;
+    //   height: 10rem;
+    // }
 
     #about {
       flex-direction: column;
